@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingynn Khet | Professional Portfolio</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font --><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scroll-padding for sticky header */
+        html { scroll-padding-top: 5rem; }
+        /* Apply Inter font */
+        body { font-family: 'Inter', sans-serif; }
+        /* Define custom Tailwind colors for dark mode and accent */
+                /* Define custom Tailwind colors for dark mode and accent */
+
+        .tailwind-config { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* === ORIGINAL BACKGROUND COLOR === */
+                        'background': '#0f172a', /* slate-900 equivalent */
+                        'primary-text': '#f1f5f9', /* slate-100 equivalent */
+                        'secondary-text': '#94a3b8', /* slate-400 equivalent */
+                        // FEMININE BUT PROFESSIONAL ACCENTS (Violet/Mauve)
+                        'accent': '#a78bfa', /* violet-400 - Rich, warm purple */
+                        'accent-light': '#c4b5fd', /* violet-300 - Lighter purple for gradients/hover */
+                        'card-bg': '#1e293b', /* slate-800 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-primary-text min-h-screen">
+
+    <!-- Header/Navigation --><header id="header" class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-card-bg shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Name/Logo --><a href="#hero" class="text-xl font-bold text-accent-light hover:text-accent transition duration-300 rounded-lg p-2">Ingynn Khet</a>
+
+            <!-- Nav Links (Hidden on mobile, shown on desktop) --><div class="hidden md:flex space-x-6 lg:space-x-10">
+                <a href="#about" class="text-secondary-text hover:text-primary-text transition duration-300 p-2 rounded-lg">About</a>
+                <!-- UPDATED ORDER --><a href="#education" class="text-secondary-text hover:text-primary-text transition duration-300 p-2 rounded-lg">Education</a>
+                <a href="#experience" class="text-secondary-text hover:text-primary-text transition duration-300 p-2 rounded-lg">Experience</a>
+                <a href="#skills" class="text-secondary-text hover:text-primary-text transition duration-300 p-2 rounded-lg">Skills</a>
+                <a href="#contact" class="text-secondary-text hover:text-primary-text transition duration-300 p-2 rounded-lg">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) --><button id="mobile-menu-btn" class="md:hidden text-primary-text focus:outline-none p-2 rounded-lg hover:bg-card-bg transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Dropdown) --><div id="mobile-menu" class="hidden md:hidden bg-card-bg/95 backdrop-blur-sm border-t border-card-bg">
+            <a href="#about" class="block py-3 px-4 text-primary-text hover:bg-background transition duration-300">About</a>
+            <!-- UPDATED ORDER --><a href="#education" class="block py-3 px-4 text-primary-text hover:bg-background transition duration-300">Education</a>
+            <a href="#experience" class="block py-3 px-4 text-primary-text hover:bg-background transition duration-300">Experience</a>
+            <a href="#skills" class="block py-3 px-4 text-primary-text hover:bg-background transition duration-300">Skills</a>
+            <a href="#contact" class="block py-3 px-4 text-primary-text hover:bg-background transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+
+        <!-- 1. Hero/About Me Section --><section id="about" class="py-12 md:py-20 lg:py-24" aria-labelledby="about-heading">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
+                <!-- Text Content --><div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                    <p id="about-heading" class="text-secondary-text text-xl mb-2">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-accent-light to-white">
+                        Ingynn Khet
+                    </h1>
+                    <h2 class="text-3xl font-semibold text-accent-light mb-6">
+                        Mechanical Engineering Student
+                    </h2>
+                    <!-- Professional Summary (Pulled directly from LinkedIn) --><p class="text-lg text-secondary-text max-w-xl mx-auto md:mx-0">
+                        I am a motivated student at Budapest University of Technology and Economics, currently pursuing a Bachelor of Science degree in Mechanical Engineering. With a passion for design, technology, and informatics, I am dedicated to expanding my skills and knowledge in these areas. I am actively seeking opportunities and experiences for professional development to further enhance my expertise and contribute effectively to innovative projects.
+                    </p>
+                    <a href="#contact" class="inline-block mt-8 px-6 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-2xl shadow-lg transition duration-300 transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                </div>
+                <!-- Photo Placeholder --><div class="order-1 md:order-2 flex-shrink-0">
+                    <img 
+                        src="uploaded:Gemini_Generated_Image_4e8yap4e8yap4e8y.jpg-7678f9a3-b858-48dd-afe5-141a5801307f" 
+                        alt="Ingynn Khet Profile Photo" 
+                        class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-accent-light shadow-2xl transition duration-500 hover:shadow-accent/50"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/1e293b/94a3b8?text=Photo';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-card-bg my-12">
+
+        <!-- 2. Education Section (ACADEMIC DEGREES ONLY) --><section id="education" class="py-12" aria-labelledby="education-heading">
+            <h2 id="education-heading" class="text-4xl font-bold mb-10 text-center text-accent-light">Academic Education</h2>
+            
+            <div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-700">
+                <div class="space-y-6">
+                    <!-- Education 1: BUTE --><div>
+                        <p class="text-xl font-medium text-accent-light">B.S. in Mechanical Engineering</p>
+                        <p class="text-secondary-text">Budapest University of Technology and Economics</p>
+                        <p class="text-sm italic mt-1 text-slate-400">Sept 2023 – Jan 2027</p>
+                    </div>
+                    <!-- Education 2: IPEM --><div>
+                        <p class="text-xl font-medium text-accent-light">Diploma in Civil Engineering</p>
+                        <p class="text-secondary-text">The Institution of Professional Engineers (IPEM)</p>
+                        <p class="text-sm italic mt-1 text-slate-400">Dec 2018 – Jun 2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <hr class="border-t border-card-bg my-12">
+
+        <!-- 3. Experience & Portfolio Section --><section id="experience" class="py-12" aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="text-4xl font-bold mb-10 text-center text-accent-light">Professional Experience & Key Projects</h2>
+            
+            <div class="space-y-12">
+                <!-- Experience 0: Technical Support Specialist (Most Recent) --><div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-accent/20 transition duration-300 border border-slate-700">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary-text">Technical Support Specialist</h3>
+                            <p class="text-secondary-text text-lg">Supercharge · Budapest, Hungary</p>
+                        </div>
+                        <p class="text-accent-light font-medium">Jan 2025 – Present (11 mos)</p>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-secondary-text">
+                        <li>Managed technical infrastructure monitoring and troubleshooting, resolving incidents through systematic log analysis and error message investigation to identify root causes in production systems.</li>
+                        <li>Monitor and respond to **AWS CloudWatch** alarms and notifications, analyzing infrastructure logs to validate alerts for potential failures or production incidents, and escalate critical issues to DevOps team for resolution.</li>
+                        <li>Manage technical support tickets in **Zendesk** with detailed documentation; coordinate incident response and resolution workflows in **Jira**, ensuring clear communication between support and DevOps teams.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 1: Coder AI Training --><div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-accent/20 transition duration-300 border border-slate-700">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary-text">Coder AI Training (Freelance)</h3>
+                            <p class="text-secondary-text text-lg">Outlier · Remote</p>
+                        </div>
+                        <p class="text-accent-light font-medium">Oct 2024 – Present (1 yr 2 mos)</p>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-secondary-text">
+                        <li>**Trained cutting-edge generative AI models** by evaluating and optimizing AI-generated code for quality, functionality, and efficiency, providing human-readable summaries of rationale.</li>
+                        <li>Solved complex coding challenges and crafted robust test cases using **Python and C** to ensure models produce functional and highly efficient solutions.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience 2: Project Coordinator Intern --><div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-accent/20 transition duration-300 border border-slate-700">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary-text">Project Coordinator Intern</h3>
+                            <p class="text-secondary-text text-lg">Vision Green Organization · Part-time</p>
+                        </div>
+                        <p class="text-accent-light font-medium">May 2024 – Sep 2024 (5 mos)</p>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-secondary-text">
+                        <li>Focused on **Erasmus+ project writing**, preparing detailed proposals, reports, and budgets for educational and community projects to secure funding.</li>
+                        <li>Maintained detailed records of project activities, timelines, and outcomes, collaborating with cross-functional teams to ensure successful execution within deadlines.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience 3: Engineering Intern --><div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-accent/20 transition duration-300 border border-slate-700">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary-text">Engineering Intern</h3>
+                            <p class="text-secondary-text text-lg">Pun Hlaing Hospitals · On-site</p>
+                        </div>
+                        <p class="text-accent-light font-medium">Jul 2022 – Sep 2022 (3 mos)</p>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-secondary-text">
+                        <li>Oversaw and managed all **MEP systems** (including RO water, fire prevention, and plumbing) to ensure proper functioning of critical hospital infrastructure.</li>
+                        <li>Maintained compliance with **JCI Facility Management and Safety standards** and managed M&E repair work efficiently, minimizing downtime.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call-to-Action --><div class="text-center mt-12">
+                <a href="https://www.linkedin.com/in/ingynn-khet/" class="inline-block px-8 py-4 bg-accent hover:bg-accent-light text-white font-bold text-lg rounded-2xl shadow-lg transition duration-300 transform hover:scale-105">
+                    View Full LinkedIn Profile
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-t border-card-bg my-12">
+        
+        <!-- 4. Skills Section --><section id="skills" class="py-12" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="text-4xl font-bold mb-10 text-center text-accent-light">Technical & Software Skills</h2>
+                
+            <div class="bg-card-bg p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-700">
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">Python</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">C (Programming Language)</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">Java</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">Optimizing Code</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">MATLAB</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">AutoCAD</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">Autodesk Inventor</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">Microsoft Office</span>
+                    <span class="px-4 py-2 bg-violet-900/50 text-violet-300 rounded-full text-sm font-medium">BIM (Building Information Modeling)</span>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-card-bg my-12">
+
+        <!-- 5. Awards and Recognition Section (CHANGED TO CERTIFICATIONS & VOLUNTEERING) --><section id="awards" class="py-12" aria-labelledby="awards-heading">
+            <h2 id="awards-heading" class="text-4xl font-bold mb-10 text-center text-accent-light">Certifications & Volunteering</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cert 1: IoT (MOVED FROM EDUCATION) --><div class="bg-card-bg p-6 rounded-2xl shadow-lg border border-slate-700">
+                    <p class="text-xl font-medium text-accent-light mb-2">Intro to IoT and Embedded Systems</p>
+                    <p class="text-secondary-text mb-3">University of California, Irvine | Issued Jul 2025</p>
+                    <p class="text-sm text-slate-400">Certification covering fundamental concepts in the Internet of Things and embedded systems design.</p>
+                </div>
+                <!-- Cert 2: Arduino (MOVED FROM EDUCATION) --><div class="bg-card-bg p-6 rounded-2xl shadow-lg border border-slate-700">
+                    <p class="text-xl font-medium text-accent-light mb-2">The Arduino Platform and C Programming</p>
+                    <p class="text-secondary-text mb-3">University of California, Irvine | Issued Aug 2025</p>
+                    <p class="text-sm text-slate-400">Certification demonstrating proficiency in microcontroller programming and hardware interaction.</p>
+                </div>
+                <!-- Volunteer Role --><div class="bg-card-bg p-6 rounded-2xl shadow-lg border border-slate-700">
+                    <p class="text-xl font-medium text-accent-light mb-2">Program and Operation Associate (Volunteer)</p>
+                    <p class="text-secondary-text mb-3">Ctrl List | Nov 2020 - Sep 2021 (11 mos)</p>
+                    <p class="text-sm text-slate-400">Volunteering role in the education sector, demonstrating commitment to program coordination and operational support.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-card-bg my-12">
+
+        <!-- 6. Contact & Footer Section (Phone Number Updated) --><section id="contact" class="py-12" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="text-4xl font-bold mb-10 text-center text-accent-light">Let's Connect</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Contact Card --><div class="lg:col-span-1 bg-card-bg p-8 rounded-2xl shadow-2xl border border-slate-700 h-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary-text">Contact Information</h3>
+                    <div class="space-y-4 text-secondary-text">
+                        <p class="flex items-center space-x-3">
+                            <span class="text-accent-light">
+                                <!-- Email Icon --><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                            </span>
+                            <!-- Updated Real Email Address --><a href="mailto:ingynnkhet.ik@gmail.com" class="hover:text-primary-text transition duration-300">ingynnkhet.ik@gmail.com</a>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="text-accent-light">
+                                <!-- Phone Icon --><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.128a11.042 11.042 0 005.516 5.516l1.128-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-11a2 2 0 01-2-2V5z"></path></svg>
+                            </span>
+                            <!-- UPDATED PHONE NUMBER --><span>+36 30 927 0269</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="text-accent-light">
+                                <!-- LinkedIn Icon (using simple path for lucide-react equivalent) --><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </span>
+                            <!-- Real LinkedIn Link --><a href="https://www.linkedin.com/in/ingynn-khet/" class="hover:text-primary-text transition duration-300">Ingynn Khet's LinkedIn</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Email Form --><div class="lg:col-span-2 bg-card-bg p-8 rounded-2xl shadow-2xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary-text">Send Me a Message</h3>
+                    <!-- Form action updated to use your specific email address --><form action="mailto:ingynnkhet.ik@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                        <!-- NEW: Sender Email Field --><div>
+                            <label for="sender_email" class="block text-sm font-medium text-secondary-text mb-1">Your Email</label>
+                            <input type="email" id="sender_email" name="Your Email Address" required class="w-full px-4 py-2 bg-background border border-slate-700 rounded-lg text-primary-text focus:ring-accent-light focus:border-accent-light shadow-sm transition duration-300" placeholder="e.g., example@domain.com">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-secondary-text mb-1">Subject</label>
+                            <input type="text" id="subject" name="Subject" required class="w-full px-4 py-2 bg-background border border-slate-700 rounded-lg text-primary-text focus:ring-accent-light focus:border-accent-light shadow-sm transition duration-300">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-secondary-text mb-1">Message</label>
+                            <textarea id="message" name="Body" rows="5" required class="w-full px-4 py-2 bg-background border border-slate-700 rounded-lg text-primary-text focus:ring-accent-light focus:border-accent-light shadow-sm transition duration-300"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-accent hover:bg-accent-light text-white font-bold rounded-2xl shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                            Send Email
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="mt-16 py-6 border-t border-card-bg bg-card-bg text-center">
+        <p class="text-sm text-secondary-text">© 2024 Ingynn Khet. All rights reserved. | Built with HTML & Tailwind CSS.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const navLinks = menu.querySelectorAll('a');
+
+            // Toggle function
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked (for smooth scroll)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
